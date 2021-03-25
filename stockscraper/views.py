@@ -29,14 +29,11 @@ def index(request):
         print(request.POST)
         form = SubredditForm(request.POST)
         user_subreddit = request.POST.get('subreddit')
-        tickers = analyze_comments(5, user_subreddit)
-        """
         try:
             tickers = analyze_comments(5, user_subreddit)
         except:
             tickers = None
             error_message = "You have entered an invalid subreddit. Please try again."
-        """
 
     print(tickers)
     context = {
@@ -66,14 +63,18 @@ def get_excel_data(workbook_path):
 
     return excel_data
 
+def get_file_path(filename):
+    here = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(here, filename)
 
+    return file_path
 
 def analyze_comments(num, user_input):
-    nyse = get_excel_data('C:\\Users\\benis\\Desktop\\Python Stuff\\django_projects\\stocktools\\stockscraper\\nyse.xlsx')
-    nasdaq = get_excel_data('C:\\Users\\benis\\Desktop\\Python Stuff\\django_projects\\stocktools\\stockscraper\\nasdaq.xlsx')
-    english_words = get_excel_data('C:\\Users\\benis\\Desktop\\Python Stuff\\django_projects\\stocktools\\stockscraper\\common_words.xlsx')
+    nyse = get_excel_data(get_file_path('nyse.xlsx'))
+    nasdaq = get_excel_data(get_file_path('nasdaq.xlsx'))
+    english_words = get_excel_data(get_file_path('common_words.xlsx'))
     english_words = [x.upper() for x in english_words if not isinstance(x, float) and x is not None]
-    acronyms = get_excel_data('C:\\Users\\benis\\Desktop\\Python Stuff\\django_projects\\stocktools\\stockscraper\\acronyms.xlsx')
+    acronyms = get_excel_data(get_file_path('acronyms.xlsx'))
 
     reddit = praw.Reddit(client_id = 'PB9EdYv3u8rqhw',
                          client_secret = 'U7JU7azYdF_vWb3is5FdGA0_4Q16cA',
