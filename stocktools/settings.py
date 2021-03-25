@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', ')ydgp$4(m@+ri0&42xvzkonwj*q52f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://arcane-meadow-85370.herokuapp.com/", ".herokuapp.com", "http://127.0.0.1:8000/"]
 
 
 # Application definition
