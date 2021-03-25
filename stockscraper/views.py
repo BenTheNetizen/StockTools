@@ -29,11 +29,14 @@ def index(request):
         print(request.POST)
         form = SubredditForm(request.POST)
         user_subreddit = request.POST.get('subreddit')
+        tickers = analyze_comments(5, user_subreddit)
+        """
         try:
             tickers = analyze_comments(5, user_subreddit)
         except:
             tickers = None
             error_message = "You have entered an invalid subreddit. Please try again."
+        """
 
     print(tickers)
     context = {
