@@ -16,20 +16,3 @@ class SubredditForm(forms.Form):
             raise ValidationError(_('Invalid input - cannot be integers'))
 
         return data
-
-class NumberOfPostsForm(forms.Form):
-    num = forms.IntegerField(help_text="Enter the number of posts you want to analyze. (integers only)")
-
-    def clean_num(self):
-        data = self.cleaned_data['num']
-
-        return data
-
-from .models import NameObject
-#class should be called what we want our form to be called
-class CreateNewList(forms.Form):
-    subreddit = forms.CharField(max_length=200, help_text="enter a subreddit")
-    num = forms.IntegerField(help_text="enter the number of posts you want to analyze")
-    # class Meta:
-    #     model = NameObject
-    #     fields = '__all__'

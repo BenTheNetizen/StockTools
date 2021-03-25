@@ -44,33 +44,6 @@ def index(request):
     }
     return render(request, 'index.html/', context)
 
-
-
-
-
-def create(request):
-    form = CreateNewList()
-    test = None
-    if request.method == 'POST':
-        print(request.POST)
-        form = CreateNewList(request.POST)
-        print(request.POST.get('subreddit'))
-        # with open('C:\\Users\\benis\\Desktop\\Python Stuff\\django_projects\\stocktools\\stockscraper\\redditstream.txt', 'a') as f:
-        #     f.write('WRITING STUFFdawdawdaw\n')
-        user_subreddit = request.POST.get('subreddit')
-        num_comments = int(request.POST.get('num'))
-
-        test = analyze_comments(num_comments, user_subreddit)
-
-        # if form.is_valid():
-        #     form.save
-    context = {
-        "form": form,
-        "test": test
-    }
-    return render(request, "stocktools/create.html", context)
-
-
 # -*- coding: utf-8 -*-
 """
 Created on Fri Feb 12 19:43:08 2021
