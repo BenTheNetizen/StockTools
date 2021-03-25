@@ -1,0 +1,18 @@
+{% extends 'base_generic.html' %}
+
+{% block title %} Create New List {% endblock %}
+
+{% block content %}
+Create page
+<form method="post" action="">
+  {% csrf_token %}
+  {{form}}
+  <button type="submit", name="save">Create New</button>
+</form>
+
+<p>dwadaw</p>
+{% for element in test %}
+  <p>{{ element }}</p>
+{% endfor %}
+
+{% endblock %}

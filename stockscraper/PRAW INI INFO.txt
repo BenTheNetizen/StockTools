@@ -1,0 +1,3 @@
+client_id = 'PB9EdYv3u8rqhw',
+client_secret = 'U7JU7azYdF_vWb3is5FdGA0_4Q16cA',
+user_agent='https://github.com/BenTheNetizen'
