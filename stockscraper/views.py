@@ -15,7 +15,7 @@ from django.conf import settings
 from django.contrib.auth.decorators import permission_required
 from django.core.exceptions import ValidationError
 
-from stockscraper.forms import CreateNewList, SubredditForm
+from stockscraper.forms import SubredditForm
 from stockscraper.models import Counter
 import openpyxl
 
