@@ -7,7 +7,7 @@ from django.urls import reverse
 from django.views import generic
 
 import praw
-from nltk import FreqDist
+import nltk
 import pandas as pd
 
 import os
