@@ -70,6 +70,8 @@ def get_file_path(filename):
     return file_path
 
 def analyze_comments(num, user_input):
+    nltk.download('punkt')
+
 
     nyse = get_excel_data(get_file_path('nyse.xlsx'))
     nasdaq = get_excel_data(get_file_path('nasdaq.xlsx'))
@@ -126,7 +128,7 @@ def analyze_comments(num, user_input):
 
     tokens_l = [w.upper() for w in tokens]
 
-
+    #breaks after this line
     freq = nltk.FreqDist(tokens_l)
     common_words = freq.most_common(100000)
     print("common words " + common_words[1:5])
