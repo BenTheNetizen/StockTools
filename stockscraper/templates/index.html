@@ -16,7 +16,22 @@
     <button type="submit", name = "save">Submit</button>
   </form>
   {% if tickers %}
-    <p>{{ tickers }}</p>
+    <table class="styled-table">
+      <thead>
+          <tr>
+              <th>Ticker Name</th>
+              <th>Hype-Score</th>
+          </tr>
+      </thead>
+      <tbody>
+        {% for k, v in tickers.items %}
+          <tr>
+              <td>{{ k }}</td>
+              <td>{{ v }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   {% endif %}
 </div>
 
