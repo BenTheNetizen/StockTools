@@ -130,7 +130,7 @@ def analyze_comments(num, user_input):
 
     #breaks after this line
     freq = nltk.FreqDist(tokens_l)
-    common_words = freq.most_common(100000)
+    common_words = freq.most_common(100)
     print("common words " + common_words[1:5])
     tickers = {'key' : 'value'}
     return tickers
