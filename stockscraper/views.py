@@ -89,7 +89,7 @@ def analyze_comments(num, user_input):
     curr_comments = 0
     unread_comments = 0
 
-    f = open(get_file_path('redditstream.txt')).read()
+    f = open(get_file_path('redditstream.txt'), "w+")
 
     print('\n')
     for submission in subreddit.hot(limit=num):
