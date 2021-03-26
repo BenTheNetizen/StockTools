@@ -34,7 +34,7 @@
   </header>
   <!-- Hero Section -->
   <div class="hero" id="hero">
-    <h2>
+    <h2 class = "intro_text">
 		<div class = "picture_text_background">
 			<span class="white_text_orange_border">STOCK</span><span class="light">TOOLS</span>
 		</div>
@@ -59,6 +59,14 @@
   </div>
 
   <div class = "about" id = "about">
+    <h2>How does SubredditStockScraper Work?</h2>
+    <p class = "text">SubredditStockScraper incorporates praw, nltk, and pandas to successfully analyze submissions on Reddit.
+      Nltk is used to perform natural language processing to tokenize posts and create a FreqDist object.
+      Using this object, the program can find the most common appearances on a given subreddit.
+      Lastly, words that are not stock tickers are removed from the results by comparing them to a database of NYSE and NASDAQ stock tickers using a pandas dataframe.
+      These databases are stored in xlsx files and are necessary for the program to run successfully.
+      An issue I ran into was that common English words such as "it," "for," "so," etc. were being displayed as stock tickers, since they in fact are listed tickers.
+      I had to incorporate another database of common acronyms and English words used in everyday speech to further prune the results.
 	  <h2>Why StockTools?</h2>
 	  <p class = "text">With the number of Robinhood users skyrocketting in the past few years, young adults and teens are investing and trading like never seen before. While growing one's wealth at an early age is a smart thing to do, many are falling prey to the greedy hands of so called "stock trading gurus." These individuals flaunt their wealth and successes at trading to promote an escape-the-rat-race lifestyle to effectively sell their high-priced courses to unknowing victims. You may have seen a few of them shown below: </p>
 	  <img class = "guruContainer" id = "ricky" src = "{% static 'css/rickystockguru.jpg' %}" alt = "Ricky Gutierrez">
@@ -67,7 +75,6 @@
 		  <h2>StockTools is here to empower the everyday trader</h2>
 		  <p class = "text">At no cost, we provide innovative market research tools and education to equip the modern trader with all the tools they need to craft an edge against the market. With our StockScraper app and many more resources to come, you can find the most up-to-date hyped stocks in discussion to beat the competition. We are here for you.</p>
 	  </div>
-
   </div>
   <!-- Footer Section -->
   <section class="footer_banner" id="contact">
