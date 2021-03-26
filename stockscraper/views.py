@@ -24,13 +24,11 @@ def index(request):
     form = SubredditForm()
     count = Counter()
     tickers = None
-    error_message = None
-    potato = "super_potato"
     if request.method == 'POST':
         print(request.POST)
         form = SubredditForm(request.POST)
         user_subreddit = request.POST.get('subreddit')
-        tickers = analyze_comments(5, user_subreddit)
+        tickers = {'key' : 'value'}
         """
         try:
             tickers = analyze_comments(5, user_subreddit)
@@ -43,9 +41,6 @@ def index(request):
     context = {
         "form": form,
         "tickers" : tickers,
-        "error_message" : error_message,
-        "count" : count,
-        "potato" : potato,
     }
     return render(request, 'index.html/', context)
 

@@ -15,23 +15,8 @@
     {{form}}
     <button type="submit", name = "save">Submit</button>
   </form>
-  {% if error_message %}
-  <p> {{ error_message }} </p>
-  {% endif %}
-  {% if tickers %}
-    <table class="styled-table">
-      <thead>
-          <tr>
-              <th>Ticker Name</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>{{ potato }}</td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+  {% if ticker %}
+    <p>{{ ticker }}</p>
   {% endif %}
 </div>
 
