@@ -135,14 +135,14 @@ def analyze_comments(num, user_input):
     #breaks after this line
     freq = nltk.FreqDist(tokens_l)
     common_words = freq.most_common(100)
-    print(common_words[1:5])
 
+    """
     for k, v in common_words:
         if (k in nyse or k in nasdaq) and k not in english_words and k not in acronyms and v > 3:
             if v > 3:
                 tickers[k] = v
-
-
+    """
+    tickers = common_words
     print(tickers)
     print(str(len(tickers)) + ' tickers')
     return tickers
