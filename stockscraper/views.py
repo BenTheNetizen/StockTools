@@ -25,6 +25,7 @@ def index(request):
     count = Counter()
     tickers = None
     error_message = None
+    potato = "super_potato"
     if request.method == 'POST':
         print(request.POST)
         form = SubredditForm(request.POST)
@@ -44,6 +45,7 @@ def index(request):
         "tickers" : tickers,
         "error_message" : error_message,
         "count" : count,
+        "potato" : potato,
     }
     return render(request, 'index.html/', context)
 
