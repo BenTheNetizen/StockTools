@@ -86,7 +86,7 @@ def analyze_comments(num, user_input):
     print(nyse[1:7])
     print(nasdaq[1:7])
     print(english_words[1:7])
-    #print("acronyms: " + acronyms[1:7])
+    print(acronyms[1:7])
 
 
 
