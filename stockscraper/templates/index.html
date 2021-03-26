@@ -15,10 +15,14 @@
     {{form}}
     <button type="submit", name = "save">Submit</button>
   </form>
+  {% if error_message %}
+  <p> {{ error_message }} </p>
+  {% endif %}
   {% if tickers %}
     <table class="styled-table">
       <thead>
           <tr>
+              <th>Ranking</th>
               <th>Ticker Name</th>
               <th>Hype-Score</th>
           </tr>
@@ -26,6 +30,7 @@
       <tbody>
         {% for k, v in tickers.items %}
           <tr>
+              <td>{{ count.increment }}</td>
               <td>{{ k }}</td>
               <td>{{ v }}</td>
           </tr>

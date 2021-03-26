@@ -28,23 +28,23 @@ def index(request):
     form = SubredditForm()
     count = Counter()
     tickers = None
+    error_message = None
     if request.method == 'POST':
         print(request.POST)
         form = SubredditForm(request.POST)
         user_subreddit = request.POST.get('subreddit')
-        tickers = analyze_comments(5, user_subreddit)
-        """
         try:
             tickers = analyze_comments(5, user_subreddit)
         except:
             tickers = None
             error_message = "You have entered an invalid subreddit. Please try again."
-        """
 
     print(tickers)
     context = {
         "form": form,
         "tickers" : tickers,
+        "error_message" : error_message,
+        "count" : count,
     }
     return render(request, 'index.html/', context)
 
