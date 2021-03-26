@@ -22,7 +22,6 @@
     <table class="styled-table">
       <thead>
           <tr>
-              <th>Ranking</th>
               <th>Ticker Name</th>
               <th>Hype-Score</th>
           </tr>
@@ -30,7 +29,6 @@
       <tbody>
         {% for k, v in tickers.items %}
           <tr>
-              <td>{{ count.increment }}</td>
               <td>{{ k }}</td>
               <td>{{ v }}</td>
           </tr>
