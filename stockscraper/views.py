@@ -29,8 +29,7 @@ def index(request):
         print(request.POST)
         form = SubredditForm(request.POST)
         user_subreddit = request.POST.get('subreddit')
-        print("I SWEAR TO GOD IF THIS DOES NTO PRINT")
-        #tickers = {'GME': 99}
+        tickers = analyze_comments(5, user_subreddit)
         """
         try:
             tickers = analyze_comments(5, user_subreddit)
@@ -90,7 +89,7 @@ def analyze_comments(num, user_input):
     curr_comments = 0
     unread_comments = 0
 
-    f = open("C:\\Users\\benis\\Desktop\\Python Stuff\\django_projects\\stocktools\\stockscraper\\redditstream.txt", "w+")
+    f = open(get_file_path('redditstream.txt')).read()
 
     print('\n')
     for submission in subreddit.hot(limit=num):
@@ -123,7 +122,7 @@ def analyze_comments(num, user_input):
     print("Total read comments: " + str(num_comments))
     print("The number next to each stock ticker is the level of interest. The tickers are displayed below in order of high to low interest.\n")
 
-    f = open("C:\\Users\\benis\\Desktop\\Python Stuff\\django_projects\\stocktools\\stockscraper\\redditstream.txt").read()
+    f = open(get_file_path('redditstream.txt')).read()
 
     tokens = nltk.word_tokenize(f)
 
@@ -141,6 +140,4 @@ def analyze_comments(num, user_input):
 
     print(tickers)
     print(str(len(tickers)) + ' tickers')
-
-    tickers = {'GME': 99}
     return tickers

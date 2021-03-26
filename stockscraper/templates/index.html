@@ -1,7 +1,7 @@
 {% extends "StocktoolsHTML.html" %}
 
 
-{% block title %}<title>TESTING</title>{% endblock %}
+{% block title %}<title>StockTools</title>{% endblock %}
 {% block content %}
 
 <div class = "stockscraperapp" id = "stockscraperapp">
@@ -22,14 +22,17 @@
     <table class="styled-table">
       <thead>
           <tr>
-
+              <th>Ranking</th>
               <th>Ticker Name</th>
+              <th>Hype-Score</th>
           </tr>
       </thead>
       <tbody>
-        {% for k tickers %}
+        {% for k, v in tickers.items %}
           <tr>
+              <td>{{ count.increment }}</td>
               <td>{{ k }}</td>
+              <td>{{ v }}</td>
           </tr>
         {% endfor %}
       </tbody>
