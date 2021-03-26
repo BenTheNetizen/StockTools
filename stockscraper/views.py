@@ -70,7 +70,6 @@ def get_file_path(filename):
     return file_path
 
 def analyze_comments(num, user_input):
-    nltk.download('word_tokenize')
 
     nyse = get_excel_data(get_file_path('nyse.xlsx'))
     nasdaq = get_excel_data(get_file_path('nasdaq.xlsx'))
