@@ -19,6 +19,10 @@ from stockscraper.forms import SubredditForm
 from stockscraper.models import Counter
 import openpyxl
 
+parentDir = os.path.dirname(__file__)
+newPath = os.path.join(parentDir, 'nltk_data')
+nltk.data.path.append(newPath)
+
 def index(request):
     """View function for the home page of the site."""
     form = SubredditForm()
