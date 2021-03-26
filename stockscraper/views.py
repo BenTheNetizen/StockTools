@@ -130,10 +130,12 @@ def analyze_comments(num, user_input):
 
     tickers = {}
 
-    for k, v in common_words:
+    for k, v in common_words.items():
         if (k in nyse or k in nasdaq) and k not in english_words and k not in acronyms and v > 3:
             if v > 3:
                 tickers[k] = v
+                print(tickers)
+
 
     print(tickers)
     print(str(len(tickers)) + ' tickers')
