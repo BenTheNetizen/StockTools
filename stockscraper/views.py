@@ -83,10 +83,14 @@ def analyze_comments(num, user_input):
     english_words = [x.upper() for x in english_words if not isinstance(x, float) and x is not None]
     acronyms = get_excel_data(get_file_path('acronyms.xlsx'))
 
-    print("nyse: " + nyse[1:7])
-    print("nasdaq: " + nasdaq[1:7])
-    print("english_words: " + english_words[1:7])
-    print("acronyms: " + acronyms[1:7])
+    print(nyse[1:7])
+
+    #print("nasdaq: " + nasdaq[1:7])
+    #print("english_words: " + english_words[1:7])
+    #print("acronyms: " + acronyms[1:7])
+
+
+
     reddit = praw.Reddit(client_id = 'PB9EdYv3u8rqhw',
                          client_secret = 'U7JU7azYdF_vWb3is5FdGA0_4Q16cA',
                          user_agent='https://github.com/BenTheNetizen')
