@@ -149,7 +149,6 @@ def analyze_comments(num, user_input):
         if (k in nyse or k in nasdaq) and k not in english_words and k not in acronyms and v > 3:
             tickers[k] = v
 
-    tickers = common_words
     print(tickers)
     print(str(len(tickers)) + ' tickers')
     return tickers
