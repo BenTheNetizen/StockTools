@@ -81,6 +81,11 @@ def analyze_comments(num, user_input):
                          client_secret = 'U7JU7azYdF_vWb3is5FdGA0_4Q16cA',
                          user_agent='https://github.com/BenTheNetizen')
 
+    print(nyse[1:5])
+    tickers = {'key' : 'value'}
+    return tickers
+
+    """
     subreddit = reddit.subreddit(user_input)
 
     num_comments = 0
@@ -132,7 +137,7 @@ def analyze_comments(num, user_input):
 
     tickers = {}
 
-    for k, v in common_words.items():
+    for k, v in common_words:
         if (k in nyse or k in nasdaq) and k not in english_words and k not in acronyms and v > 3:
             if v > 3:
                 tickers[k] = v
@@ -141,3 +146,4 @@ def analyze_comments(num, user_input):
     print(tickers)
     print(str(len(tickers)) + ' tickers')
     return tickers
+    """
