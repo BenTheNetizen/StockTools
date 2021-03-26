@@ -1,2 +1,5 @@
+wordnet
+porter_test
+reuters
 punkt
-probability
+stopwords
