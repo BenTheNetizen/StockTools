@@ -81,11 +81,6 @@ def analyze_comments(num, user_input):
                          client_secret = 'U7JU7azYdF_vWb3is5FdGA0_4Q16cA',
                          user_agent='https://github.com/BenTheNetizen')
 
-    print(nyse[1:5])
-    tickers = {'key' : 'value'}
-    return tickers
-
-    """
     subreddit = reddit.subreddit(user_input)
 
     num_comments = 0
@@ -132,6 +127,10 @@ def analyze_comments(num, user_input):
     tokens_l = [w.upper() for w in tokens]
     print(tokens_l)
 
+    tickers = {'k', 'v'}
+    return tickers
+
+    """
     freq = nltk.FreqDist(tokens_l)
     common_words = freq.most_common(100000)
 
