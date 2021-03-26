@@ -141,5 +141,5 @@ def analyze_comments(num, user_input):
     print(tickers)
     print(str(len(tickers)) + ' tickers')
 
-    tickers = {'GME': 99, 'AAPL': 21, 'ATH': 18, 'PLTR': 17, 'NIO': 15, 'MSFT': 9, 'QQQ': 8, 'TSM': 6, 'WMT': 6, 'TSLA': 6, 'ICLN': 6, 'SQQQ': 5, 'BABA': 5}
+    tickers = {'GME': 99}
     return tickers
