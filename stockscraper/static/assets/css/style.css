@@ -43,6 +43,10 @@ input[name="subreddit"] {
     border: 2px solid black;
 }
 
+#table-entries {
+  color:black;
+}
+
 .styled-table tbody tr {
     border-bottom: 2px solid #dddddd;
 }
