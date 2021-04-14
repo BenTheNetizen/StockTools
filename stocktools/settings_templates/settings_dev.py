@@ -21,13 +21,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'MEDIA')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-#SECRET_KEY = ')ydgp$4(m@+ri0&42xvzkonwj*q52f_!0s9q(iq3lxc%6&e(2('
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', ')ydgp$4(m@+ri0&42xvzkonwj*q52f_!0s9q(iq3lxc%6&e(2(')
+SECRET_KEY = ')ydgp$4(m@+ri0&42xvzkonwj*q52f_!0s9q(iq3lxc%6&e(2('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["https://arcane-meadow-85370.herokuapp.com/", ".herokuapp.com", "http://127.0.0.1:8000/", "www.stocktools.co", "stocktools.co"]
+ALLOWED_HOSTS = ["https://arcane-meadow-85370.herokuapp.com/", ".herokuapp.com", "http://127.0.0.1:8000/", "www.stocktools.co", "stocktools.co", '127.0.0.1']
 
 
 # Application definition
@@ -44,7 +43,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -121,20 +119,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-# The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = BASE_DIR / 'staticfiles'  #. os.path.join(BASE_DIR, 'staticfiles')
-
-# The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
-
-# Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

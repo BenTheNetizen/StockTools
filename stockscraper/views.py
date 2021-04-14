@@ -29,18 +29,29 @@ def index(request):
     count = Counter()
     tickers = None
     error_message = None
+
+    #Number of visits and searches to this view
+    num_visits = request.session.get('num_visits', 1)
+    request.session['num_visits'] = num_visits + 1
+
+    num_searches = request.session.get('num_searches', 1)
+
     if request.method == 'POST':
+        request.session['num_searches'] = num_searches + 1
         print(request.POST)
         form = SubredditForm(request.POST)
         user_subreddit = request.POST.get('subreddit')
         try:
             tickers = analyze_comments(5, user_subreddit)
+
         except:
             tickers = None
             error_message = "You have entered an invalid subreddit. Please try again."
 
         if not tickers:
             error_message = "You have entered an invalid subreddit. Please try again."
+
+
 
     print(tickers)
 
@@ -49,6 +60,8 @@ def index(request):
         "tickers" : tickers,
         "error_message" : error_message,
         "count" : count,
+        'num_visits': num_visits,
+        'num_searches': num_searches,
     }
     return render(request, 'index.html/', context)
 
