@@ -30,12 +30,8 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: OnePage - v2.2.2
-  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Javascript Files -->
+
 </head>
 
 <body>
@@ -62,12 +58,16 @@
     </div>
   </header><!-- End Header -->
 
+
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
+
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div id="particles-js"></div>
       <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-9 text-center">
-          <h1>Subreddit StockScraper Tool Available!</h1>
+        <div id="hero-text-wrapper" class="col-xl-7 col-lg-9 text-center">
+          <h1>StockScraper Tool Available!</h1>
           <h2>Find what stock everyone's talking about</h2>
         </div>
       </div>
@@ -256,7 +256,8 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
-
+  <script src="{% static 'assets/js/particles.js' %}"></script>
+  <script src="{% static 'assets/js/app.js' %}"></script>
 </body>
 
 </html>
