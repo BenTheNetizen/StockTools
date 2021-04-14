@@ -40,6 +40,8 @@ def index(request):
             error_message = "You have entered an invalid subreddit. Please try again."
 
     print(tickers)
+    if not tickers:
+        error_message = "You have entered an invalid subreddit. Please try again."
     context = {
         "form": form,
         "tickers" : tickers,
