@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  {% block title %}<title>StockTools</title>{% endblock %}
+  {% load static %}
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <!--<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">-->
+  <<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: OnePage - v2.2.2
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <!--<h1 class="logo mr-auto"><a href="index.html">StockTools</a></h1>-->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo mr-auto">
+        <img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid">StockTools
+      </a>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1>SubredditStockScraper Tool Available!</h1>
+          <h2>Find what stock everyone's talking about</h2>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#cta" class="btn-get-started scrollto">Check it out!</a>
+      </div>
+
+      <h3 id="technologies">Technologies used: </h3>
+
+      <div class="row icon-boxes">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-fingerprint-line"></i></div>
+            <h4 class="title"><a href="https://www.nltk.org/" target="_blank">NLTK</a></h4>
+            <p class="description">Natural Language Toolkit (NLTK) used for natural language processing</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-palette-line"></i></div>
+            <h4 class="title"><a href="https://praw.readthedocs.io/" target="_blank">PRAW</a></h4>
+            <p class="description">Python Reddit API Wrapper (PRAW) used to retrieve reddit submissions and comments</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-command-line"></i></div>
+            <h4 class="title"><a href="https://pandas.pydata.org/" target="_blank">Pandas</a></h4>
+            <p class="description">Pandas used to perform data analysis and accessing database files</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-stack-line"></i></div>
+            <h4 class="title"><a href="https://www.djangoproject.com/" target="_blank">Django</a></h4>
+            <p class="description">Django used as web framework to develop this site</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Why StockTools</h2>
+        </div>
+
+        <div class="content">
+          <div class="col-lg-12">
+            <p>
+              With the number of Robinhood users skyrocketting in the past few years, young adults and teens are involving themselves
+              in the financial markets like never seen before. While growing one's wealth at an early age is a smart thing to do, many
+              are falling prey to the greedy hands of "stock trading gurus." Misinformation regarding the financial markets is widespread
+              and incredibly detrimental to the financial safety of new and inexperienced investors. Here's our goal:
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Provide a resourceful platform to educate new investors </li>
+              <li><i class="ri-check-double-line"></i> Create innovative market research tools</li>
+              <li><i class="ri-check-double-line"></i> Promote healthy investing and trading practices</li>
+            </ul>
+          </div>
+          <div class="col-lg-12 pt-4 pt-lg-0">
+            <h4>StockTools is here to empower the everyday trader</h4>
+            <p>
+            At no cost, we provide innovative market research tools and education to equip the modern trader with all the tools
+            they need to craft an edge against the market. With our StockScraper app and many more resources to come,
+            you can find the most up-to-date hyped stocks in discussion to beat the competition. We are here for you.
+            </p>
+            <!-- LEARN MORE BUTTON -->
+            <!-- <a href="#" class="btn-learn-more">Learn More</a> -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+      <div class="container">
+
+        <div class="row justify-content-end">
+
+          <div class="col-lg-6 col-md-5 col-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <span data-toggle="counter-up">1</span>
+              <p>View Count</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-5 col-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <span data-toggle="counter-up">1</span>
+              <p>Number of Searches</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Scraper App Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+        <div class="text-center">
+          <h3>SubredditStockScraper</h3>
+            {% block content %}{% endblock %}
+          <!--<a class="cta-btn" href="#">Call To Action</a>-->
+        </div>
+      </div>
+    </section><!-- End Scraper App Section -->
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+
+
+        <div class="section-title">
+          <h2>Contact</h2>
+            <div class="profile-area">
+              <div class="container">
+                <div class="col-md-8">
+                  <div class="card">
+                    <div class="img1"><img src="{% static 'assets/img/yale.jpg' %}" alt=""></div>
+                    <div class="img2"><img src="{% static 'assets/img/profile-pic.jpg' %}" alt=""></div>
+                    <div class="main-text">
+                      <h2>Benjamin Chen</h2>
+                      <p>I am a sophomore at Yale University studying computer science.
+                        You can reach me through LinkedIn or email. If you would like to check out my other projects
+                       or view my resume, click the buttons below.</p>
+                   </div>
+                   <div class="socials">
+                     <a href="mailto:benjamin.chen@yale.edu" target="_blank" class="email"><i class="bx bx-mail-send"></i></a>
+                     <a href="https://www.linkedin.com/in/benjamin-chen-07402b142/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                     <a href="https://github.com/BenTheNetizen" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+                     <a href="{% static 'assets/resume.pdf' %}" class="file" target="_blank" download><i class='bx bx-file'></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section><!-- End Contact Section -->
+    <hr>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+        <div class="copyright">
+          &copy; 2021 - <strong><span>StockTools</span></strong>. All Rights Reserved.
+        </div>
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
