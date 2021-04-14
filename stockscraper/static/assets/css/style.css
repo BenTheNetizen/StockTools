@@ -16,8 +16,14 @@
   background: #2487ce;
 }
 
-input[name="subreddit"] {
-  min-width: 490px;
+/*  STYLING THE FORM */
+.stockscraperapp input {
+  width: 80%;
+}
+
+.stockscraperapp table {
+  max-width: 80%;
+  overflow-x:auto;
 }
 
 .styled-table {
@@ -25,7 +31,6 @@ input[name="subreddit"] {
     margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     margin-left:auto;
     margin-right:auto;

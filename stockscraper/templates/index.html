@@ -9,7 +9,7 @@
   <form class = "subreddit_form" action="#stockscraperapp" method="post">
     {% csrf_token %}
     {{form}}
-    <button type="submit", name = "save">Submit</button>
+    <button class="btn btn-dark" type="submit", name = "save">Submit</button>
   </form>
   {% if error_message %}
   <p> {{ error_message }} </p>
