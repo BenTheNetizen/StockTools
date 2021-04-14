@@ -26,7 +26,7 @@ SECRET_KEY = ')ydgp$4(m@+ri0&42xvzkonwj*q52f_!0s9q(iq3lxc%6&e(2('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://arcane-meadow-85370.herokuapp.com/", ".herokuapp.com", "http://127.0.0.1:8000/", "www.stocktools.co", "stocktools.co"]
 
 
 # Application definition
