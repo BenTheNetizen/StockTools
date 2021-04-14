@@ -25,7 +25,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'MEDIA')
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', ')ydgp$4(m@+ri0&42xvzkonwj*q52f_!0s9q(iq3lxc%6&e(2(')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
