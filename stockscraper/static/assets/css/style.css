@@ -1110,25 +1110,25 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Cta
+# stockscraperapp-wrapper
 --------------------------------------------------------------*/
-.cta {
+.stockscraperapp-wrapper {
   background: #2487ce;
   background-size: cover;
   padding: 60px 0;
 }
 
-.cta h3 {
+.stockscraperapp-wrapper h3 {
   color: #fff;
   font-size: 35px;
   font-weight: 700;
 }
 
-.cta p {
+.stockscraperapp-wrapper p {
   color: #fff;
 }
 
-.cta .cta-btn {
+.stockscraperapp-wrapper .stockscraperapp-wrapper-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -1142,7 +1142,7 @@ section {
   color: #fff;
 }
 
-.cta .cta-btn:hover {
+.stockscraperapp-wrapper .stockscraperapp-wrapper-btn:hover {
   background: #fff;
   color: #2487ce;
 }
