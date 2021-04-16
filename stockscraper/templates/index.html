@@ -2,39 +2,174 @@
 
 
 {% block title %}<title>StockTools</title>{% endblock %}
+
+{% block nav %}
+  <li class="active"><a href="#hero">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="./blog">Blog</a></li>
+  <li><a href="#contact">Contact</a></li>
+{% endblock %}
+
+
 {% block content %}
 
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
 
-<div class = "stockscraperapp">
-  <form class = "subreddit_form" action="#stockscraperapp" method="post">
-    {% csrf_token %}
-    {{form}}
-    <button class="btn btn-dark" type="submit", name = "save">Submit</button>
-  </form>
-  {% if error_message %}
-  <p> {{ error_message }} </p>
-  {% endif %}
-  {% if tickers %}
-    <table class="styled-table">
-      <thead>
-          <tr>
-              <th>Ranking</th>
-              <th>Ticker Name</th>
-              <th>Hype-Score</th>
-          </tr>
-      </thead>
-      <tbody id="table-entries">
-        {% for k, v in tickers.items %}
-          <tr>
-              <td>{{ count.increment }}</td>
-              <td>{{ k }}</td>
-              <td>{{ v }}</td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  {% endif %}
-</div>
+  <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+    <div id="particles-js"></div>
+    <div class="row justify-content-center">
+      <div id="hero-text-wrapper" class="col-xl-7 col-lg-9 text-center">
+        <h1>StockScraper Tool Available!</h1>
+        <h2>Find what stock everyone's talking about</h2>
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="#stockscraperapp" class="btn-get-started scrollto">Check it out!</a>
+    </div>
 
+    <h3 id="technologies">Technologies used: </h3>
+
+    <div class="row icon-boxes">
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <div class="icon"><i class="ri-fingerprint-line"></i></div>
+          <h4 class="title"><a href="https://www.nltk.org/" target="_blank">NLTK</a></h4>
+          <p class="description">Natural Language Toolkit (NLTK) used for natural language processing</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box">
+          <div class="icon"><i class="ri-palette-line"></i></div>
+          <h4 class="title"><a href="https://praw.readthedocs.io/" target="_blank">PRAW</a></h4>
+          <p class="description">Python Reddit API Wrapper (PRAW) used to retrieve reddit submissions and comments</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+        <div class="icon-box">
+          <div class="icon"><i class="ri-command-line"></i></div>
+          <h4 class="title"><a href="https://pandas.pydata.org/" target="_blank">Pandas</a></h4>
+          <p class="description">Pandas used to perform data analysis and accessing database files</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
+        <div class="icon-box">
+          <div class="icon"><i class="ri-stack-line"></i></div>
+          <h4 class="title"><a href="https://www.djangoproject.com/" target="_blank">Django</a></h4>
+          <p class="description">Django used as web framework to develop this site</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Why StockTools</h2>
+      </div>
+
+      <div class="content">
+        <div class="col-lg-12">
+          <p>
+            With the number of Robinhood users skyrocketting in the past few years, young adults and teens are involving themselves
+            in the financial markets like never seen before. While growing one's wealth at an early age is a smart thing to do, many
+            are falling prey to the greedy hands of "stock trading gurus." Misinformation regarding the financial markets is widespread
+            and incredibly detrimental to the financial safety of new and inexperienced investors. Here's our goal:
+          </p>
+          <ul>
+            <li><i class="ri-check-double-line"></i> Provide a resourceful platform to educate new investors </li>
+            <li><i class="ri-check-double-line"></i> Create innovative market research tools</li>
+            <li><i class="ri-check-double-line"></i> Promote healthy investing and trading practices</li>
+          </ul>
+        </div>
+        <div class="col-lg-12 pt-4 pt-lg-0">
+          <h4>StockTools is here to empower the everyday trader</h4>
+          <p>
+          At no cost, we provide innovative market research tools and education to equip the modern trader with all the tools
+          they need to craft an edge against the market. With our StockScraper app and many more resources to come,
+          you can find the most up-to-date hyped stocks in discussion to beat the competition. We are here for you.
+          </p>
+          <!-- LEARN MORE BUTTON -->
+          <!-- <a href="#" class="btn-learn-more">Learn More</a> -->
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Section -->
+
+  <!-- ======= Counts Section ======= -->
+  <section id="counts" class="counts section-bg">
+    <div class="container">
+
+      <div class="row justify-content-end">
+
+        <div class="col-lg-6 col-md-5 col-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <span data-toggle="counter-up">{{ num_visits.visitor_count }}</span>
+            <p>View Count</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-5 col-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <span data-toggle="counter-up">{{ num_visits.search_count }}</span>
+            <p>Number of Searches</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+
+  <!-- ======= Scraper App Section ======= -->
+  <section id="stockscraperapp" class="stockscraperapp-wrapper">
+    <div class="container" data-aos="zoom-in">
+      <div class="text-center">
+        <h3>Subreddit StockScraper</h3>
+        <p>Enter a subreddit that discusses stocks (ex: wallstreetbets, stocks, robinhood, etc.)
+        <p>Note that loading times can be long</p>
+        <div class = "stockscraperapp">
+          <form class = "subreddit_form" action="#stockscraperapp" method="post">
+            {% csrf_token %}
+            {{form}}
+            <button class="btn btn-dark" type="submit", name = "save">Submit</button>
+          </form>
+          {% if error_message %}
+          <p> {{ error_message }} </p>
+          {% endif %}
+          {% if tickers %}
+            <table class="styled-table">
+              <thead>
+                  <tr>
+                      <th>Ranking</th>
+                      <th>Ticker Name</th>
+                      <th>Hype-Score</th>
+                  </tr>
+              </thead>
+              <tbody id="table-entries">
+                {% for k, v in tickers.items %}
+                  <tr>
+                      <td>{{ count.increment }}</td>
+                      <td>{{ k }}</td>
+                      <td>{{ v }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section><!-- End Scraper App Section -->
 
 {% endblock %}
