@@ -25,7 +25,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'MEDIA')
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', ')ydgp$4(m@+ri0&42xvzkonwj*q52f_!0s9q(iq3lxc%6&e(2(')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["https://arcane-meadow-85370.herokuapp.com/", ".herokuapp.com", "http://127.0.0.1:8000/", "www.stocktools.co", "stocktools.co"]
 
@@ -142,4 +142,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORAWRDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
-    DEBUG = True
+    DEBUG = False
